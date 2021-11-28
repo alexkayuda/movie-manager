@@ -1,7 +1,6 @@
 package main
 
 import (
-	"backend/models"
 	"context"
 	"database/sql"
 	"flag"
@@ -10,6 +9,8 @@ import (
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/alexkayuda/movie-manager.git/models"
 
 	_ "github.com/lib/pq"
 )

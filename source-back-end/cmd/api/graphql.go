@@ -1,7 +1,6 @@
 package main
 
 import (
-	"backend/models"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -10,6 +9,7 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/alexkayuda/movie-manager.git/models"
 	"github.com/graphql-go/graphql"
 )
 

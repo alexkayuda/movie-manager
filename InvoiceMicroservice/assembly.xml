@@ -1,0 +1,35 @@
+<!--<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.1.0 http://maven.apache.org/xsd/assembly-2.1.0.xsd">-->
+<!--    <id>production-artifact</id>-->
+<!--    <formats>-->
+<!--        <format>jar</format>-->
+<!--    </formats>-->
+<!--    <dependencySets>-->
+<!--        <dependencySet>-->
+<!--            <useProjectArtifact>false</useProjectArtifact>-->
+<!--            <outputDirectory>shared</outputDirectory>-->
+<!--            <unpack>false</unpack>-->
+<!--&lt;!&ndash;            <excludes>&ndash;&gt;-->
+<!--&lt;!&ndash;                <exclude>org.everydaycodes:app:*</exclude>&ndash;&gt;-->
+<!--&lt;!&ndash;                <exclude>org.everydaycodes:tools:*</exclude>&ndash;&gt;-->
+<!--&lt;!&ndash;            </excludes>&ndash;&gt;-->
+<!--        </dependencySet>-->
+<!--    </dependencySets>-->
+<!--    <moduleSets>-->
+<!--        <moduleSet>-->
+<!--            <useAllReactorProjects>true</useAllReactorProjects>-->
+<!--            <includes>-->
+<!--                <include>org.example.microservice:application:jar:</include>-->
+<!--                <include>org.example.microservice:model:jar:</include>-->
+<!--                <include>org.example.microservice:rpc:jar:</include>-->
+<!--            </includes>-->
+<!--            <binaries>-->
+<!--                <unpack>false</unpack>-->
+<!--                <includeDependencies>false</includeDependencies>-->
+<!--            </binaries>-->
+<!--        </moduleSet>-->
+<!--    </moduleSets>-->
+<!--</assembly>-->
+
+<!--&lt;!&ndash;SOURCE&ndash;&gt;-->
+<!--&lt;!&ndash;https://everyday.codes/java/creating-production-artifacts-in-a-multi-module-maven-project/&ndash;&gt;-->

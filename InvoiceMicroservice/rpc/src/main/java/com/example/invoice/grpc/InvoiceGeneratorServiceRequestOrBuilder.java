@@ -50,13 +50,13 @@ public interface InvoiceGeneratorServiceRequestOrBuilder extends
   long getAmount();
 
   /**
-   * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type purchaseType = 5;</code>
-   * @return The enum numeric value on the wire for purchaseType.
+   * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type type = 5;</code>
+   * @return The enum numeric value on the wire for type.
    */
-  int getPurchaseTypeValue();
+  int getTypeValue();
   /**
-   * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type purchaseType = 5;</code>
-   * @return The purchaseType.
+   * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type type = 5;</code>
+   * @return The type.
    */
-  com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type getPurchaseType();
+  com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type getType();
 }

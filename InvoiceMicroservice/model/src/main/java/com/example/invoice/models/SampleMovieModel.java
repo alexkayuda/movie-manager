@@ -9,7 +9,6 @@ public class SampleMovieModel {
     private int id;
     private String title;
     private String description;
-    private int year;
     private String releaseDate;
     private int runtime;
     private MpaaRatings mpaaRating;
@@ -37,14 +36,6 @@ public class SampleMovieModel {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
     }
 
     public String getReleaseDate() {
@@ -85,7 +76,6 @@ public class SampleMovieModel {
                 "id=" + id +
                 ", title=" + title +
                 ", description=" + description +
-                ", year=" + year +
                 ", releaseDate=" + releaseDate +
                 ", runtime=" + runtime +
                 ", mpaaRating=" + mpaaRating.toString() +

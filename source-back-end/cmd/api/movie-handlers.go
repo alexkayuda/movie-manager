@@ -1,7 +1,6 @@
 package main
 
 import (
-	"backend/models"
 	"encoding/json"
 	"errors"
 	"io"
@@ -10,6 +9,8 @@ import (
 	"net/url"
 	"strconv"
 	"time"
+
+	"github.com/alexkayuda/movie-manager.git/models"
 
 	"github.com/julienschmidt/httprouter"
 )

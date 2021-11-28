@@ -1,12 +1,13 @@
 package main
 
 import (
-	"backend/models"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"net/http"
 	"time"
+
+	"github.com/alexkayuda/movie-manager.git/models"
 
 	"github.com/pascaldekloe/jwt"
 	"golang.org/x/crypto/bcrypt"

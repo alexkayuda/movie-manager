@@ -2,6 +2,8 @@ package com.example.invoice.utils.validators;
 
 import com.example.invoice.grpc.InvoiceGeneratorServiceRequest;
 
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
 import java.util.regex.Pattern;
 
 public class InvoiceGeneratorServiceRequestValidator {
@@ -16,7 +18,7 @@ public class InvoiceGeneratorServiceRequestValidator {
         }
     }
 
-    public static void validateEmail(final String email) {
+    public static void validateEmail(final String email) throws AddressException {
         if(email == null || !patternMatches(email)){
             throw new RuntimeException("InvoiceGeneratorServiceRequest: Email Pattern does not match");
         }
@@ -29,15 +31,15 @@ public class InvoiceGeneratorServiceRequestValidator {
     }
 
     public static void validateInvoiceType(InvoiceGeneratorServiceRequest.Type invoiceType){
-        if(invoiceType.getNumber() < 1 || invoiceType.getNumber() > 2){
+        if(!invoiceType.getValueDescriptor().getName().equals("PURCHASE") &&
+                !invoiceType.getValueDescriptor().getName().equals("SUBSCRIPTION")){
             throw new RuntimeException("InvoiceGeneratorServiceRequest: InvoiceType is incorrect");
         }
     }
 
-    private static boolean patternMatches(final String emailAddress) {
-        return Pattern
-                .compile("^(.+)@(\\\\S+)$")
-                .matcher(emailAddress)
-                .matches();
+    private static boolean patternMatches(final String email) throws AddressException {
+        InternetAddress emailAddress = new InternetAddress(email);
+        emailAddress.validate();
+        return true;
     }
 }

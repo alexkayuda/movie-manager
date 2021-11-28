@@ -19,7 +19,7 @@ private static final long serialVersionUID = 0L;
     firstName_ = "";
     lastName_ = "";
     email_ = "";
-    purchaseType_ = 0;
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
           case 40: {
             int rawValue = input.readEnum();
 
-            purchaseType_ = rawValue;
+            type_ = rawValue;
             break;
           }
           default: {
@@ -344,22 +344,22 @@ private static final long serialVersionUID = 0L;
     return amount_;
   }
 
-  public static final int PURCHASETYPE_FIELD_NUMBER = 5;
-  private int purchaseType_;
+  public static final int TYPE_FIELD_NUMBER = 5;
+  private int type_;
   /**
-   * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type purchaseType = 5;</code>
-   * @return The enum numeric value on the wire for purchaseType.
+   * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type type = 5;</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getPurchaseTypeValue() {
-    return purchaseType_;
+  public int getTypeValue() {
+    return type_;
   }
   /**
-   * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type purchaseType = 5;</code>
-   * @return The purchaseType.
+   * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type type = 5;</code>
+   * @return The type.
    */
-  public com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type getPurchaseType() {
+  public com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type getType() {
     @SuppressWarnings("deprecation")
-    com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type result = com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.valueOf(purchaseType_);
+    com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type result = com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.valueOf(type_);
     return result == null ? com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.UNRECOGNIZED : result;
   }
 
@@ -389,8 +389,8 @@ private static final long serialVersionUID = 0L;
     if (amount_ != 0L) {
       output.writeSInt64(4, amount_);
     }
-    if (purchaseType_ != com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.UNKNOWN.getNumber()) {
-      output.writeEnum(5, purchaseType_);
+    if (type_ != com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.UNKNOWN.getNumber()) {
+      output.writeEnum(5, type_);
     }
     unknownFields.writeTo(output);
   }
@@ -414,9 +414,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeSInt64Size(4, amount_);
     }
-    if (purchaseType_ != com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.UNKNOWN.getNumber()) {
+    if (type_ != com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, purchaseType_);
+        .computeEnumSize(5, type_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -441,7 +441,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEmail())) return false;
     if (getAmount()
         != other.getAmount()) return false;
-    if (purchaseType_ != other.purchaseType_) return false;
+    if (type_ != other.type_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -462,8 +462,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAmount());
-    hash = (37 * hash) + PURCHASETYPE_FIELD_NUMBER;
-    hash = (53 * hash) + purchaseType_;
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -605,7 +605,7 @@ private static final long serialVersionUID = 0L;
 
       amount_ = 0L;
 
-      purchaseType_ = 0;
+      type_ = 0;
 
       return this;
     }
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
       result.lastName_ = lastName_;
       result.email_ = email_;
       result.amount_ = amount_;
-      result.purchaseType_ = purchaseType_;
+      result.type_ = type_;
       onBuilt();
       return result;
     }
@@ -701,8 +701,8 @@ private static final long serialVersionUID = 0L;
       if (other.getAmount() != 0L) {
         setAmount(other.getAmount());
       }
-      if (other.purchaseType_ != 0) {
-        setPurchaseTypeValue(other.getPurchaseTypeValue());
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -991,54 +991,54 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int purchaseType_ = 0;
+    private int type_ = 0;
     /**
-     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type purchaseType = 5;</code>
-     * @return The enum numeric value on the wire for purchaseType.
+     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type type = 5;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getPurchaseTypeValue() {
-      return purchaseType_;
+    public int getTypeValue() {
+      return type_;
     }
     /**
-     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type purchaseType = 5;</code>
-     * @param value The enum numeric value on the wire for purchaseType to set.
+     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type type = 5;</code>
+     * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
      */
-    public Builder setPurchaseTypeValue(int value) {
-      purchaseType_ = value;
+    public Builder setTypeValue(int value) {
+      type_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type purchaseType = 5;</code>
-     * @return The purchaseType.
+     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type type = 5;</code>
+     * @return The type.
      */
-    public com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type getPurchaseType() {
+    public com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type getType() {
       @SuppressWarnings("deprecation")
-      com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type result = com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.valueOf(purchaseType_);
+      com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type result = com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.valueOf(type_);
       return result == null ? com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type.UNRECOGNIZED : result;
     }
     /**
-     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type purchaseType = 5;</code>
-     * @param value The purchaseType to set.
+     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type type = 5;</code>
+     * @param value The type to set.
      * @return This builder for chaining.
      */
-    public Builder setPurchaseType(com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type value) {
+    public Builder setType(com.example.invoice.grpc.InvoiceGeneratorServiceRequest.Type value) {
       if (value == null) {
         throw new NullPointerException();
       }
       
-      purchaseType_ = value.getNumber();
+      type_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type purchaseType = 5;</code>
+     * <code>.com.example.invoice.InvoiceGeneratorServiceRequest.Type type = 5;</code>
      * @return This builder for chaining.
      */
-    public Builder clearPurchaseType() {
+    public Builder clearType() {
       
-      purchaseType_ = 0;
+      type_ = 0;
       onChanged();
       return this;
     }

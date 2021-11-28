@@ -13,13 +13,12 @@ public class DefaultMovieBuilder {
     private int id;
     private String title;
     private String description;
-    private int year;
     private Date releaseDate;
     private int runtime;
     private MpaaRatings mpaaRating;
     private List<MovieGenres> genres;
 
-    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd:hh:mm");
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-hh-mm");
 
     public DefaultMovieBuilder withId(final int id){
         this.id = id;
@@ -33,11 +32,6 @@ public class DefaultMovieBuilder {
 
     public DefaultMovieBuilder withDescription(final String description){
         this.description = description;
-        return this;
-    }
-
-    public DefaultMovieBuilder withYear(final int year){
-        this.year = year;
         return this;
     }
 
@@ -67,7 +61,6 @@ public class DefaultMovieBuilder {
         movieModel.setId(id);
         movieModel.setTitle(title);
         movieModel.setDescription(description);
-        movieModel.setYear(year);
         movieModel.setReleaseDate(dateFormat.format(releaseDate));
         movieModel.setRuntime(runtime);
         movieModel.setMpaaRating(mpaaRating);
